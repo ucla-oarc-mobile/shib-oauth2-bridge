@@ -11,7 +11,9 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
+Route::group(array('prefix'=>'oauth2'), function(){
+    Route::get('/authorize', 'OAuth2Controller@getAuthorize');
+    Route::post('/authorize', 'OAuth2Controller@postAuthorize');
+    Route::post('/access_token', 'OAuth2Controller@postAccessToken');
+    Route::get('/user', 'OAuth2Controller@getUser');
 });
