@@ -13,11 +13,11 @@ class Shibboleth
     public static function user()
     {
         return (object)[
-            'eduPersonPrincipalName' => 'ebollens@ucla.edu',
-            'eduPersonScopedAffiliation' => 'staff@ucla.edu',
-            'sn' => 'Bollens',
-            'givenName' => 'Eric',
-            'mail' => 'ebollens@ucla.edu'
+            'eduPersonPrincipalName' => $_SERVER['SHIB_EPPN'],
+            'eduPersonScopedAffiliation' => $_SERVER['SHIB_EDU_PERSON_AFFILIATION'],
+            'sn' => $_SERVER['SHIB_SN'],
+            'givenName' => $_SERVER['SHIB_GIVEN_NAME'],
+            'mail' => $_SERVER['SHIB_MAIL']
         ];
     }
 }

@@ -10,8 +10,13 @@ class DatabaseSeeder extends Seeder {
 	public function run()
 	{
 		Eloquent::unguard();
-
-		// $this->call('UserTableSeeder');
+                
+                DB::table('oauth_scopes')->delete();
+                DB::table('oauth_scopes')->insert([
+                    'scope' => 'basic',
+                    'name' => 'basic',
+                    'description' => 'basic'
+                ]);
 	}
 
 }

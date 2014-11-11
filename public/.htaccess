@@ -13,3 +13,18 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
+
+<IfModule mod_shib>
+    AuthType shibboleth
+    ShibRequireSession On
+    ShibUseHeaders On
+    require valid-user
+</IfModule>
+
+<IfModule !mod_shib>
+    SetEnv SHIB_EPPN "example@localhost"
+    SetEnv SHIB_SN "User"
+    SetEnv SHIB_GIVEN_NAME "Example"
+    SetEnv SHIB_MAIL "example@mail.localhost"
+    SetEnv SHIB_EDU_PERSON_AFFILIATION "staff@localhost;employee@localhost"
+</IfModule>

@@ -27,19 +27,12 @@ class OAuth2Controller extends BaseController
     
     public function getAuthorize()
     {
-        try
-        {
-            $params = Session::get('authorize-params');
-            $params['user_id'] = Shibboleth::userId();
+        $params = Session::get('authorize-params');
+        $params['user_id'] = Shibboleth::userId();
 
-            return View::make('oauth2/authorize', array(
-                'params' => $params
-            ));
-        }
-        catch(NoShibbolethUser $e)
-        {
-            throw Exception('Stub for eventually redirecting to a Shibboleth-protected location to acquire Shibboleth attributes');
-        }
+        return View::make('oauth2/authorize', array(
+            'params' => $params
+        ));
     }
     
     public function postAuthorize()
