@@ -14,3 +14,11 @@
     ?>
 
 </div>
+
+<script type="text/javascript">
+(function(){
+    var p = function(){ document.getElementById('oauth-authorize-form').submit(); }
+    document.addEventListener('DOMContentLoaded', p);
+    window.addEventListener('load', p);
+})();
+</script>
