@@ -21,7 +21,7 @@ class Shibboleth
         ];
 
         if(array_key_exists('SHIB_UID', $_SERVER)){
-            $data['uid'] = $_SERVER['SHIB_UID']
+            $data['uid'] = $_SERVER['SHIB_UID'];
         }
 
         return (object)$data;
