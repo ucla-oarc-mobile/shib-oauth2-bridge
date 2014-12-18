@@ -17,6 +17,15 @@ The Shibboleth/OAuth2 bridge is built on top of outstanding open platforms, pack
 
 ## Setup
 
+## Dependencies
+
+Download and run composer:
+
+```
+curl -sS https://getcomposer.org/installer | php
+php composer.phar install
+```
+
 ### App
 
 Configure app URI in `app/config/local/app.php`.
