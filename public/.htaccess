@@ -26,5 +26,6 @@
     SetEnv SHIB_SN "User"
     SetEnv SHIB_GIVEN_NAME "Example"
     SetEnv SHIB_MAIL "example@mail.localhost"
-    SetEnv SHIB_EDU_PERSON_AFFILIATION "staff@localhost;employee@localhost"
+    SetEnv SHIB_EDU_PERSON_AFFILIATION "staff@ucla.edu;employee@ucla.edu"
+    SetEnv SHIB_UID "123456789"
 </IfModule>
