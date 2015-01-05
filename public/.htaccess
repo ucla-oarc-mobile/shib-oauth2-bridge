@@ -11,6 +11,7 @@
     # Handle Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_URI} !/(Shibboleth\.sso) [NC]
     RewriteRule ^ index.php [L]
 </IfModule>
 
