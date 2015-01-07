@@ -15,6 +15,8 @@
     RewriteRule ^ index.php [L]
 </IfModule>
 
+SetEnv SHIB_IMPLIED_AFFILIATION_SCOPE "ucla.edu"
+
 <IfModule mod_shib>
     AuthType shibboleth
     ShibRequireSession On
@@ -27,6 +29,6 @@
     SetEnv SHIB_SN "User"
     SetEnv SHIB_GIVEN_NAME "Example"
     SetEnv SHIB_MAIL "example@mail.localhost"
-    SetEnv SHIB_EDU_PERSON_AFFILIATION "staff@ucla.edu;employee@ucla.edu"
+    SetEnv SHIB_EDU_PERSON_AFFILIATION "staff;employee"
     SetEnv SHIB_UID "123456789"
 </IfModule>
