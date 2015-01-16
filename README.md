@@ -2,7 +2,7 @@
 
 ## Status
 
-The code in this repository is considered an **alpha release** at this time. Use at your own risk.
+The code in this repository is considered a **beta release** at this time.
 
 ## License
 
@@ -107,11 +107,11 @@ User data from Shibboleth:
 Add clients and client endpoints for all applications leveraging this bridge:
 
 ```sql
-INSERT INTO `oauth_clients` (`id`, `secret`, `name`, `created_at`, `updated_at`) 
+INSERT INTO `oauth_clients` (`id`, `secret`, `name`, `created_at`, `updated_at`)
     VALUES ('my-app', 'my-secret', 'My Example Application', now(), now());
 ```
 
 ```sql
-INSERT INTO `oauth_client_endpoints` (`id`, `client_id`, `redirect_uri`, `created_at`, `updated_at`) 
+INSERT INTO `oauth_client_endpoints` (`id`, `client_id`, `redirect_uri`, `created_at`, `updated_at`)
     VALUES (1, 'my-app', 'http://localhost:8080/auth/oauth2/shibboleth', now(), now());
 ```
