@@ -1,15 +1,10 @@
 <?php
 
 class BaseController extends Controller {
-    
+
     public function __construct()
     {
-        
-    }
-    
-    public function getUser()
-    {
-        return Response::json(Shibboleth::user());
+
     }
 
 	/**
