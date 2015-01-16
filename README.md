@@ -49,14 +49,16 @@ php artisan db:seed --env=local
 
 ### Shibboleth
 
-If `mod_shib` is installed, the `public/.htaccess` file will require it to enforce user login before accessing OAuth2 endpoints:
+If `mod_shib` is installed, add a rule to Apache for the `/oauth2/authorize` route to require Shibboleth:
 
 ```apache
 <IfModule mod_shib>
+  <Location /oauth2/authorize>
     AuthType shibboleth
     ShibRequireSession On
     ShibUseHeaders On
     require valid-user
+  </Location>
 </IfModule>
 ```
 
