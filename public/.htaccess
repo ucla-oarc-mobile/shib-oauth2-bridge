@@ -18,10 +18,11 @@
 SetEnv SHIB_IMPLIED_AFFILIATION_SCOPE "ucla.edu"
 
 <IfModule !mod_shib>
-    SetEnv HTTP_SHIB_EPPN "example@localhost"
-    SetEnv HTTP_SHIB_SN "User"
-    SetEnv HTTP_SHIB_GIVEN_NAME "Example"
-    SetEnv HTTP_SHIB_MAIL "example@mail.localhost"
-    SetEnv HTTP_SHIB_EDU_PERSON_AFFILIATION "staff;employee"
-    SetEnv HTTP_SHIB_UID "123456789"
+    SetEnv X_ALLOW_TEST_AUTH "true"
+    #SetEnv HTTP_SHIB_EPPN "example@localhost"
+    #SetEnv HTTP_SHIB_SN "User"
+    #SetEnv HTTP_SHIB_GIVEN_NAME "Example"
+    #SetEnv HTTP_SHIB_MAIL "example@mail.localhost"
+    #SetEnv HTTP_SHIB_EDU_PERSON_AFFILIATION "staff;employee"
+    #SetEnv HTTP_SHIB_UID "123456789"
 </IfModule>

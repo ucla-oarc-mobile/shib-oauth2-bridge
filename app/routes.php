@@ -14,6 +14,8 @@
 Route::group(array('prefix'=>'oauth2'), function(){
     Route::get('/authorize', 'OAuth2Controller@getAuthorize');
     Route::post('/authorize', 'OAuth2Controller@postAuthorize');
+    Route::get('/test-authorize', 'OAuth2Controller@getTestAuthorize');
+    Route::post('/test-authorize', 'OAuth2Controller@postTestAuthorize');
     Route::post('/access_token', 'OAuth2Controller@postAccessToken');
     Route::get('/user', 'OAuth2Controller@getUser');
 });
